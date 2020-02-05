@@ -11,4 +11,4 @@ const getEmployees = (req, res) => {
     return res.json(rows);
   })}
 
-  module.exports(getEmployees);
+  module.exports = getEmployees;
