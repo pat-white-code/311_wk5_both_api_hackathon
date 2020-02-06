@@ -19,4 +19,6 @@ class Connection {
   }
 }
 
-module.exports = Connection;
+const instance = new Connection()
+
+module.exports = instance;

@@ -2,10 +2,12 @@ const mysql = require('mysql');
 const pool = require('../mysql/connection');
 const getEmployees = require('./modules/employees/getEmployees');
 const getEmployeeById = require('./modules/employees/getEmployeeById');
+const getEmployeesByFirstName = require('./modules/employees/getEmployeesByFirstName');
 
-// Update the getEmployees function so that it calls the database, selecting all fields from the employees table but limiting the results to 50. Use res.json to return the results to the user
+// This file acts as a funnel to collect all of the modules and export them in one controller file for reference by the router.
 
 module.exports = {
   getEmployees,
-  getEmployeeById
+  getEmployeeById,
+  getEmployeesByFirstName
 }
