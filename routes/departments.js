@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const controller = require('../controllers/modules/departments');
+const controller = require('../controllers/departments');
 
 
 
@@ -8,7 +8,7 @@ const controller = require('../controllers/modules/departments');
 //   res.send('getting employees...')
 // })
 
-router.get('/', controller.departments);
+router.get('/', controller.getDepartment);
 
 
 
