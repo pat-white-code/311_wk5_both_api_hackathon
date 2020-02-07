@@ -8,11 +8,11 @@ const controller = require('../controllers/employees');
 //   res.send('getting employees...')
 // })
 router.get('/:id', controller.getEmployeeById);
-// router.get('/:first_name', controller.getUserByfirst_name)
 router.get('/', controller.getEmployees);
 // router.put('/', controller.getEmployees)
 // router.put('/:id', controller.getEmployeesById)
 router.get('/first_name/:first_name', controller.getEmployeesByFirstName);
+router.get('/last_name/:last_name', controller.getEmployeesByLastName);
 
 
 module.exports = router
