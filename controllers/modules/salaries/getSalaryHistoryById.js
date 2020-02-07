@@ -5,6 +5,10 @@ const mysql = require('mysql');
 
 const getSalaryHistoryById = (req, res) => {
 
+  // let direction = 'DESC';
+
+  // if(req.query.order="asc") { direction = ``};
+
   let sql = `
   SELECT from_date, to_date, salary
   FROM employees
@@ -13,6 +17,10 @@ const getSalaryHistoryById = (req, res) => {
   WHERE employees.emp_no = ? 
   ORDER BY from_date DESC;
   `;
+
+  if(req.query.order === "asc") {
+    sql = sql.replace(/DESC/g, '')
+  }
 
   let replacements = [req.params.id]
 
