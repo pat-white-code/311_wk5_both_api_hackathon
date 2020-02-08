@@ -4,6 +4,7 @@ const app = express()
 const usersRouter = require('./routes/employees');
 const salariesRouter = require('./routes/salaries');
 const departmentsRouter = require('./routes/departments');
+const titlesRouter = require('./routes/titles');
 
 const port = process.env.PORT || 4001;
 
@@ -11,6 +12,7 @@ const port = process.env.PORT || 4001;
 app.use('/employees', usersRouter);
 app.use('/salaries', salariesRouter);
 app.use('/departments', departmentsRouter);
+app.use('/titles', titlesRouter);
 
 app.get('/', (req, res) => {
   res.send('Welcome to our server!')
